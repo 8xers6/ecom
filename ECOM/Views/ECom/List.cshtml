@@ -1,0 +1,50 @@
+﻿@model List<UserInformationViewModel>
+
+@{
+    var welcomeMessage = TempData["WelcomeMessage"] as string;
+}
+
+<!-- Display the welcome message if it exists -->
+@if (TempData["WelcomeMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["WelcomeMessage"]
+    </div>
+}
+
+<!-- Header with Logout Button -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>User List</h1>
+
+    <!-- Logout Button -->
+    <form asp-controller="ECom" asp-action="Logout" method="post" class="form-inline">
+        <button type="submit" class="btn btn-link">Logout</button>
+    </form>
+</div>
+<!-- Table of Customer -->
+<table class="table table-bordered" id="dataTable">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Full Name</th> 
+            <th>Birthday</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@($"{user.firstname} {user.middlename} {user.lastname} {user.name_extension}")</td>
+                <td>@user.birthday</td>
+                <td>@user.address</td>
+                <td>@user.contact</td>
+                <td>@user.email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

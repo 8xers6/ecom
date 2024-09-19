@@ -1,0 +1,122 @@
+﻿@model UserInformationViewModel
+@{
+    var successMessage = TempData["SuccessMessage"] as string;
+}
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div class="alert alert-success">
+        @successMessage
+    </div>
+}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="text-center mb-4">Sign Up</h1>
+
+            <!-- Added border and padding to the form -->
+            <form asp-controller="Account" asp-action="Register" method="post" class="border border-secondary p-4 rounded">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="username" class="control-label">Username</label>
+                            <input type="text" asp-for="username" class="form-control" placeholder="Enter your username" />
+                            <span asp-validation-for="username" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="email" class="control-label">Email</label>
+                            <input type="email" asp-for="email" class="form-control" placeholder="Enter your email" />
+                            <span asp-validation-for="email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="password" class="control-label">Password</label>
+                            <input type="password" asp-for="password" class="form-control" placeholder="Enter your password" />
+                            <span asp-validation-for="password" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="confirmPassword" class="control-label">Confirm Password</label>
+                            <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm your password" />
+                            <span class="text-danger">
+                                @if (ViewData.ModelState.ContainsKey("ConfirmPassword"))
+                                {
+                                    <text>@ViewData.ModelState["ConfirmPassword"].Errors.FirstOrDefault()?.ErrorMessage</text>
+                                }
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="firstname" class="control-label">Firstname</label>
+                            <input type="text" asp-for="firstname" class="form-control" placeholder="Enter your firstname" />
+                            <span asp-validation-for="firstname" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="lastname" class="control-label">Lastname</label>
+                            <input type="text" asp-for="lastname" class="form-control" placeholder="Enter your lastname" />
+                            <span asp-validation-for="lastname" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="middlename" class="control-label">Middlename</label>
+                            <input type="text" asp-for="middlename" class="form-control" placeholder="Enter your middlename" />
+                            <span asp-validation-for="middlename" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="name_extension" class="control-label">Name Extension</label>
+                            <input type="text" asp-for="name_extension" class="form-control" placeholder="Enter your name extension" />
+                            <span asp-validation-for="name_extension" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="birthday" class="control-label">Birthday</label>
+                            <input type="date" asp-for="birthday" class="form-control" />
+                            <span asp-validation-for="birthday" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="address" class="control-label">Address</label>
+                            <input type="text" asp-for="address" class="form-control" placeholder="Enter your address" />
+                            <span asp-validation-for="address" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="contact" class="control-label">Contact</label>
+                            <input type="text" asp-for="contact" class="form-control" placeholder="Enter your contact" />
+                            <span asp-validation-for="contact" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary w-100">Register</button>
+                </div>
+
+                <div class="text-center mt-3">
+                    <p class="mb-0">Already have an account? <a href="@Url.Action("Login", "Account")">Login here</a>.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

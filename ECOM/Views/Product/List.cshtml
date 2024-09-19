@@ -1,0 +1,97 @@
+﻿@model IEnumerable<ECOM.Models.ProductViewModel>
+
+<div class="container mt-4">
+    @if (!Model.Any())
+    {
+        <!-- Display message when there are no products -->
+        <div class="alert alert-warning text-center" role="alert">
+            No products to display yet.
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var product in Model)
+            {
+                @if (int.TryParse(product.product_stocks, out int stocks) && stocks > 0)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <!-- Product Image with Clickable Modal Trigger -->
+                            <img src="~/productimage/@product.product_image"
+                                 class="card-img-top"
+                                 alt="@product.product_name"
+                                 style="object-fit: contain; width: 100%; height: 180px; padding-top: 5px;"
+                                 data-bs-toggle="modal" data-bs-target="#imageModal"
+                                 onclick="showFullImage('~/productimage/@product.product_image')" />
+
+                            <div class="card-body">
+                                <!-- Product Name -->
+                                <h5 class="card-title">@product.product_name</h5>
+
+                                <!-- Product Description -->
+                                <p class="card-text">
+                                    @product.product_description
+                                </p>
+
+                                <!-- Product Details -->
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Stocks: @product.product_stocks</li>
+                                    <li class="list-group-item">Variant: @product.product_variant</li>
+                                    <li class="list-group-item">Price: $@product.product_price</li>
+                                </ul>
+                            </div>
+
+                            <div class="card-footer text-center">
+                                <button class="btn btn-secondary">
+                                    Add to Cart
+                                </button>
+                                <!-- Buy Now Button triggers modal -->
+                                <button class="btn btn-primary">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    }
+</div>
+
+<!-- Full Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img id="fullImageModal" src="" alt="Product Image" class="img-fluid" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Modal for Product Information (existing code remains unchanged) -->
+<div class="modal fade fixed-modal-size" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <!-- Modal content here -->
+</div>
+
+<!-- Add Bootstrap JavaScript and Popper.js for the modal functionality -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+<script>
+    function showFullImage(imageSrc) {
+        document.getElementById('fullImageModal').src = imageSrc.replace('~', ''); // Replace '~' for correct path
+    }
+
+    function showProductModal(name, description, quantity, variant, price, imageSrc) {
+        // Existing showProductModal logic
+    }
+
+    function validateQuantity() {
+        // Existing validateQuantity logic
+    }
+</script>

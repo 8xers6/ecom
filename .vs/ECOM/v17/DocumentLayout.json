@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\ECOM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB05AB86-DE33-4C49-9E5E-1DAB663C15B5}|ECOM\\ECOM.csproj|c:\\users\\administrator\\source\\repos\\ecom\\ecom\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB05AB86-DE33-4C49-9E5E-1DAB663C15B5}|ECOM\\ECOM.csproj|solutionrelative:ecom\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB05AB86-DE33-4C49-9E5E-1DAB663C15B5}|ECOM\\ECOM.csproj|c:\\users\\administrator\\source\\repos\\ecom\\ecom\\models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB05AB86-DE33-4C49-9E5E-1DAB663C15B5}|ECOM\\ECOM.csproj|solutionrelative:ecom\\models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB05AB86-DE33-4C49-9E5E-1DAB663C15B5}|ECOM\\ECOM.csproj|c:\\users\\administrator\\source\\repos\\ecom\\ecom\\views\\product\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BB05AB86-DE33-4C49-9E5E-1DAB663C15B5}|ECOM\\ECOM.csproj|solutionrelative:ecom\\views\\product\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB05AB86-DE33-4C49-9E5E-1DAB663C15B5}|ECOM\\ECOM.csproj|c:\\users\\administrator\\source\\repos\\ecom\\ecom\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB05AB86-DE33-4C49-9E5E-1DAB663C15B5}|ECOM\\ECOM.csproj|solutionrelative:ecom\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ECOM\\ECOM\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ECOM\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ECOM\\ECOM\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ECOM\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAuwFsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T05:33:20.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ECOM\\ECOM\\Models\\ProductViewModel.cs",
+              "RelativeDocumentMoniker": "ECOM\\Models\\ProductViewModel.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ECOM\\ECOM\\Models\\ProductViewModel.cs",
+              "RelativeToolTip": "ECOM\\Models\\ProductViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T05:19:07.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ECOM\\ECOM\\Views\\Product\\Add.cshtml",
+              "RelativeDocumentMoniker": "ECOM\\Views\\Product\\Add.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ECOM\\ECOM\\Views\\Product\\Add.cshtml",
+              "RelativeToolTip": "ECOM\\Views\\Product\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-18T05:12:12.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ECOM\\ECOM\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ECOM\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ECOM\\ECOM\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ECOM\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAiwEYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T05:10:41.742Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
